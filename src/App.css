@@ -2,12 +2,19 @@
 
 /* Global Styles */
 :root {
-  --primary-color: #dc3545;
+  /* --primary-color: #dc3545;
   --dark-color: #333333;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
   --success-color: #28a745;
-  --link-color: royalBlue;
+  --link-color: royalBlue; */
+  --primary-color: #735c69;
+  --dark-color: #b1736c;
+  --light-color: #fac6b1;
+  --danger-color: #fbf3e9;
+  /* --success-color: #ffdc73; */
+  --success-color: #2ed199;
+  --link-color: #4065b5;
 }
 
 * {
@@ -20,7 +27,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
+  background-color: var(--danger-color);
   color: #333;
 }
 
@@ -30,7 +37,7 @@ a {
 }
 
 a:hover {
-  color: #666;
+  color: #39bcff;
 }
 
 ul {

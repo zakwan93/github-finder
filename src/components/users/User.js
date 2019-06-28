@@ -32,7 +32,8 @@ class User extends Component {
       public_repos,
       public_gists,
       hireable,
-      company
+      company,
+      email
     } = this.props.user;
 
     const { loading, repos } = this.props;
@@ -80,6 +81,13 @@ class User extends Component {
                 )}
               </li>
               <li>
+                {email && (
+                  <Fragment>
+                    Email: <strong> {email} </strong>
+                  </Fragment>
+                )}
+              </li>
+              <li>
                 {company && (
                   <Fragment>
                     Company: <strong> {company} </strong>
@@ -90,11 +98,14 @@ class User extends Component {
                 {blog && (
                   <Fragment>
                     Website:
-                    <strong>
-                      <a href={blog} className="website">
-                        {blog}
-                      </a>
-                    </strong>
+                    <strong>{blog}</strong>
+                    <a
+                      href={`https://${blog}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="fas fa-external-link-alt text-success m" />
+                    </a>
                   </Fragment>
                 )}
               </li>
